@@ -9,10 +9,16 @@ server:
 ---
 
 spring:
-  config:
-    activate:
-      on-profile:
-      - dev
+  profiles: 
+  - dev
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/platzi-market
+    username: postgres
+    password: postgres
+  sql:
+    init:
+      continue-on-error: true
 
 server:
   port: 8081
@@ -21,6 +27,14 @@ server:
 spring:
   profiles:
   - pdn
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/platzi-market
+    username: postgres
+    password: platzi
+  sql:
+    init:
+      continue-on-error: true
 
 server:
   port: 80
