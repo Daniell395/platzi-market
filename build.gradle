@@ -15,6 +15,7 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc', version: '2.7.5'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
@@ -23,6 +24,7 @@ dependencies {
 	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.2.Final'
 
 	runtimeOnly 'org.postgresql:postgresql'
+
 }
 
 tasks.named('test') {

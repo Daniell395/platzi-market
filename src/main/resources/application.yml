@@ -12,7 +12,6 @@ spring:
   profiles: 
   - dev
   datasource:
-    driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/platzi-market
     username: postgres
     password: postgres
@@ -28,7 +27,6 @@ spring:
   profiles:
   - pdn
   datasource:
-    driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/platzi-market
     username: postgres
     password: platzi
