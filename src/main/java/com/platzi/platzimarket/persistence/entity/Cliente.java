@@ -2,16 +2,13 @@ package com.platzi.platzimarket.persistence.entity;
 
 import java.util.List;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "clientes")
 
 public class Cliente {
-
+    @Id
     private Integer id;
     private String nombre;
     private String apellidos;

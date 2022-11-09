@@ -11,6 +11,6 @@ public interface ProductRepository {
     Optional<List<Product>>getByCategory(int categoryId);
     Optional<List<Product>>getLimitedProducts(int quantity);
     Optional<Product>getProduct(int productId);
-    Producto save(Product product);
+    Product save(Product product);
     void delete(int productId);
 }

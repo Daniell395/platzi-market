@@ -3,14 +3,19 @@ package com.platzi.platzimarket.domain.service;
 public class Product {
     private Integer productId;
     private String name;
-        private Double price;
+    private Double price;
     private Integer stock;
     private Boolean active;
     private Category category;
+    private Integer categoryId;
 
     public Integer getProductId() {
         return productId;
     }
+
+    public Integer getCategoryId() {return categoryId;}
+
+    public void setCategoryId(Integer categoryId) {this.categoryId = categoryId;}
 
     public void setProductId(Integer productId) {
         this.productId = productId;
