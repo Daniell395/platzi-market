@@ -29,7 +29,6 @@ public class Compra {
     
     @Column(name = "medio_pago")
     private String medioPago;
-
     private String comentario;
     private Boolean estado;
 
@@ -76,5 +75,12 @@ public class Compra {
     public void setEstado(Boolean estado) {
         this.estado = estado;
     }
+
+    public Cliente getCliente() {return cliente;}
+
+    public void setCliente(Cliente cliente) {this.cliente = cliente;}
+
+    public List<ComprasProducto> getProductos() {return productos;}
+    public void setProductos(List<ComprasProducto> productos) {this.productos = productos;}
 
 }
