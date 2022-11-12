@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import com.platzi.platzimarket.domain.repository.ProductRepository;
-import com.platzi.platzimarket.domain.service.Product;
+import com.platzi.platzimarket.domain.Product;
 import com.platzi.platzimarket.persistence.crud.ProductoCrudRepository;
 import com.platzi.platzimarket.persistence.entity.Producto;
 import com.platzi.platzimarket.persistence.mapper.ProductMapper;
