@@ -6,13 +6,13 @@ import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
-import org.springframework.stereotype.Component;
+
 
 import java.util.List;
 
 @Mapper(componentModel = "spring", uses = {CategoryMapper.class})
 public interface ProductMapper {
-
+    //los @Mappings no son necesarios en JAVA 15
     @Mappings({
             @Mapping(source ="idProducto",target ="productId"),
             @Mapping(source ="nombre",target ="name"),
