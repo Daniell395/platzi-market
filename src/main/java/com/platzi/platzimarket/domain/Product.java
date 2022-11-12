@@ -1,4 +1,6 @@
-package com.platzi.platzimarket.domain.service;
+package com.platzi.platzimarket.domain;
+
+import com.platzi.platzimarket.domain.Category;
 
 public class Product {
     private Integer productId;
