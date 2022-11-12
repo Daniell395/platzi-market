@@ -1,6 +1,6 @@
 package com.platzi.platzimarket.persistence.mapper;
 
-import com.platzi.platzimarket.domain.service.PurchaseItem;
+import com.platzi.platzimarket.domain.PurchaseItem;
 import com.platzi.platzimarket.persistence.entity.ComprasProducto;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;

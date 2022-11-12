@@ -1,6 +1,6 @@
-package com.platzi.platzimarket.domain.service.controller;
+package com.platzi.platzimarket.web.controller;
 
-import com.platzi.platzimarket.domain.service.Product;
+import com.platzi.platzimarket.domain.Product;
 import com.platzi.platzimarket.domain.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
