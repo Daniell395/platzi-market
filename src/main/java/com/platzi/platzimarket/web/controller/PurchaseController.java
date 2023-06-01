@@ -15,9 +15,13 @@ import java.util.logging.Logger;
 public class PurchaseController {
     private PurchaseService purchaseService;
 
-    @GetMapping()
+    @GetMapping("/all")
     public ResponseEntity<List<Purchase>> getAll() {
-        return new ResponseEntity<>(purchaseService.getAll(), HttpStatus.OK);
+        try{
+            return new ResponseEntity<>(purchaseService.getAll(), HttpStatus.OK);
+        }catch (RuntimeException ex) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
     }
 
     @GetMapping("client/{id}")
@@ -35,7 +39,7 @@ public class PurchaseController {
         }
     }
 
-    @PostMapping("")
+    @PostMapping("/save")
     public ResponseEntity<Purchase> savePurchase(@RequestBody Purchase purchase){
         return new ResponseEntity<>(purchaseService.save(purchase),HttpStatus.CREATED);
     }
