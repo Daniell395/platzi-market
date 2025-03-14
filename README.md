@@ -18,4 +18,10 @@ para ver la emulacion de la API se dejo habilitado el Swagger UI
 
 http://localhost:8081/platzi-market/api/swagger-ui/index.html#/
 
+Se crea la imagen en docker, se comprueba su construccion con:
+
+- docker build -t platzi-market .
+- docker-compose up --build -d
+
+
 > Proyecto hecho 100% con amor al aprendizaje 😀
