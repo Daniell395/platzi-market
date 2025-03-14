@@ -2,6 +2,7 @@ package com.platzi.platzimarket.web.controller;
 
 import com.platzi.platzimarket.domain.Purchase;
 import com.platzi.platzimarket.domain.service.PurchaseService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +14,7 @@ import java.util.logging.Logger;
 @RestController
 @RequestMapping("/purchases")
 public class PurchaseController {
+    @Autowired
     private PurchaseService purchaseService;
 
     @GetMapping("/all")
@@ -28,11 +30,7 @@ public class PurchaseController {
     public ResponseEntity<List<Purchase>> getByClient(@PathVariable("id") String clientId) {
         try {
             Optional<List<Purchase>> optionalList = purchaseService.getByClient(clientId);
-            if (optionalList.isPresent() && !optionalList.isEmpty()) {
-                return new ResponseEntity<>(optionalList.get(), HttpStatus.OK);
-            } else {
-                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-            }
+            return optionalList.map(purchases -> new ResponseEntity<>(purchases, HttpStatus.OK)).orElseGet(() -> new ResponseEntity<>(HttpStatus.NO_CONTENT));
         }
         catch(Exception e){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
