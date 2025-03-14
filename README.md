@@ -14,4 +14,8 @@ las principales urls son
 
 la ejecucion se realiza en PlatziMarketApplication
 
-debido a ajustes posteriores, no carga la parte de front basada en sping
+para ver la emulacion de la API se dejo habilitado el Swagger UI
+
+http://localhost:8081/platzi-market/api/swagger-ui/index.html#/
+
+> Proyecto hecho 100% con amor al aprendizaje 😀
